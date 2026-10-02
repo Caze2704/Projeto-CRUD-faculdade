@@ -1,0 +1,28 @@
+<header>
+    <h1>Para realizar seu cadastro, preencha o formulário abaixo</h1>
+</header>
+<main class="formulario">
+    <section>
+        <form action="/acesso/user/save" method="post" id="container" enctype="multipart/form-data">
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name" class="input" required maxlength="255" placeholder="Digite seu nome">
+            </div>
+            <div>
+                <label for="age">Idade:</label>
+                <input type="number" name="age" id="age" class="input" required min="1", max="120" placeholder="Digite sua idade">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" class="input" required placeholder="@email">
+            </div>
+            <div>
+                <label for="photo">Foto (Opcional)</label>
+                <input type="file" name="photo" id="photo" class="input" accept="image/*">
+            </div>
+            <div>
+                <input type="submit" value="Cadastrar">
+            </div>
+        </form>
+    </section>
+</main>

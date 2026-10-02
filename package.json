@@ -1,0 +1,31 @@
+{
+  "name": "projeto-crud-faculdade",
+  "version": "1.0.0",
+  "description": "Projeto crud feito para um trabalho da faculdade",
+  "homepage": "https://github.com/Caze2704/Projeto-CRUD-faculdade#readme",
+  "bugs": {
+    "url": "https://github.com/Caze2704/Projeto-CRUD-faculdade/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caze2704/Projeto-CRUD-faculdade.git"
+  },
+  "license": "MIT",
+  "author": "Eduardo Duarte",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "Nodemon server.js localhost 3000"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "express-handlebars": "^9.0.1",
+    "multer": "^2.4.0",
+    "pg": "^8.23.1"
+  }
+}

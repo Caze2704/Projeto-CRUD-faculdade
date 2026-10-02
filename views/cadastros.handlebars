@@ -1,0 +1,12 @@
+<header>
+    <h1>Cadastros:</h1>
+    {{> partials}}
+</header>
+<div id="container-cadastros">
+    {{#each cadastros}}
+        <div>
+            <h2>{{this.name}}</h2>
+            <a href="/acesso/cadastro/{{idcadastros}}">Ver cadastro</a>
+        </div>
+    {{/each}}
+</div>

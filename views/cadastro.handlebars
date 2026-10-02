@@ -1,0 +1,41 @@
+<header>
+    <h1>Seja bem vindo {{infoUser.name}}!</h1>
+    {{> partials}}
+</header>
+
+<main class="detalhe">
+    <section class="perfil">
+        <div class="container-foto">
+            {{#if infoUser.photo_type}}
+                <img src="/acesso/images/{{infoUser.idcadastros}}" alt="Foto de perfil" class="foto">
+                {{else}}
+                <div class="semFoto">
+                    <img src="/img/perfilsemfoto.png" alt="Perfil sem foto">
+                    <p>Perfil sem Foto</p>
+                </div>   
+            {{/if}}
+        </div>
+        <section id="container-info">
+            <div class="name">
+                <h2>Nome:</h2>
+                {{infoUser.name}}
+            </div>
+            <div class="age">
+                <h2>Idade:</h2>
+                {{infoUser.age}}
+            </div>
+            <div class="email">
+                <h2>Email:</h2>
+                {{infoUser.email}}
+            </div>
+        </section>
+        <section id="Buttons">
+            <form action="/acesso/cadastro/{{infoUser.idcadastros}}/delete" method="post">
+                <button type="submit" onsubmit="Tem certeza que deseja excluir o cadastro?" class="btn-excluir">Excluir cadastro</button>
+            </form>
+            <form action="/acesso/cadastro/{{infoUser.idcadastros}}/update" method="post">
+                <button type="submit" class="btn-atualizar">Atualizar cadastro</button>
+            </form>
+        </section>
+    </section>
+</main>
