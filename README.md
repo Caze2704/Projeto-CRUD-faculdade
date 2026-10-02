@@ -104,7 +104,7 @@ As colunas `bytes` e `photo_type` guardam, respectivamente, o conteúdo da foto 
 
 ## Autor
 
-Desenvolvido por **[seu nome]** para a disciplina de **[nome da disciplina]**, **[sua instituição]**.
+Desenvolvido por **Eduardo Henrique** para a disciplina de **Lógica de programção**, **UFRN**.
 
 ## Licença
 
