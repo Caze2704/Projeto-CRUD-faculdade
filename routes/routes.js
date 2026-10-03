@@ -130,7 +130,7 @@ router.post('/cadastro/:id/update/save', upload.single('photo'), (req, res) => {
             console.log(err)
             return res.status(500).end()
         }
-        res.redirect('/acesso/cadastros/')
+        res.redirect(`/acesso/cadastro/${id}`)
     })
 })
 module.exports = router
