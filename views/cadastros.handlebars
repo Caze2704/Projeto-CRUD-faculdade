@@ -2,6 +2,14 @@
     <h1>Cadastros:</h1>
     {{> partials}}
 </header>
+{{#if message}}
+    <div class="alerta">
+        <h3>{{message}}</h3>
+    </div>
+{{/if}}
+<div id="container-buscar">
+    <input type="search" name="busca" id="busca" placeholder="Digite por um nome">
+</div>
 <div id="container-cadastros">
     {{#each cadastros}}
         <div>
@@ -10,3 +18,5 @@
         </div>
     {{/each}}
 </div>
+
+<script src="/js/busca.js"defer></script>

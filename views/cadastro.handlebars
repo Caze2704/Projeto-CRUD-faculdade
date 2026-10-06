@@ -2,7 +2,11 @@
     <h1>Seja bem vindo {{infoUser.name}}!</h1>
     {{> partials}}
 </header>
-
+{{#if message}}
+    <div class="alerta">
+        <h3>{{message}}</h3>
+    </div>
+{{/if}}
 <main class="detalhe">
     <section class="perfil">
         <div class="container-foto">
@@ -33,7 +37,7 @@
             <form action="/acesso/cadastro/{{infoUser.idcadastros}}/delete" method="post">
                 <button type="submit" onsubmit="Tem certeza que deseja excluir o cadastro?" class="btn-excluir">Excluir cadastro</button>
             </form>
-            <form action="/acesso/cadastro/{{infoUser.idcadastros}}/update" method="post">
+            <form action="/acesso/cadastro/{{infoUser.idcadastros}}/update" method="get">
                 <button type="submit" class="btn-atualizar">Atualizar cadastro</button>
             </form>
         </section>

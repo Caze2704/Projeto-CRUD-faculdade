@@ -2,6 +2,11 @@
     <h1>Atualização de cadastro de {{infoUser.name}}</h1>
     {{> partials}}
 </header>
+{{#if error}}
+    <div class="alerta alerta-erro">
+        <p>{{error}}</p>
+    </div>
+{{/if}}
 <main class="formulario">
     <section>
         <form action="/acesso/cadastro/{{infoUser.idcadastros}}/update/save" method="post" id="container" enctype="multipart/form-data">
