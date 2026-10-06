@@ -55,16 +55,15 @@ router.get('/api/cadastros', (req, res) => {
 
     const select = 'SELECT idcadastros, name, photo_type FROM cadastros WHERE name ILIKE $1 ORDER BY name LIMIT 50'
 
-    let params = ['%' + busca + '%']
+    const params = ['%' + busca + '%']
 
     pool.query(select, params, function(err, data){
         if(err){
             console.log(err)
             return res.status(500).json({
-                error: "[ERROR]"
+                error: "Erro ao buscar os cadastros"
             })
         }
-        console.log(data.rows)
         res.json(data.rows)
     })
 })
